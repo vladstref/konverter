@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Конвертер величин</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Конвертер величин</h1>
+
+    <select id="type" onchange="updateUnits()">
+        <option value="length">Длина</option>
+        <option value="weight">Вес</option>
+        <option value="temperature">Температура</option>
+        <option value="volume">Объём</option>
+    </select>
+
+    <div class="converter">
+        <input type="number" id="inputValue" placeholder="Введите значение">
+
+        <select id="fromUnit"></select>
+
+        <span>→</span>
+
+        <select id="toUnit"></select>
+
+        <button onclick="convert()">Конвертировать</button>
+    </div>
+
+    <h2 id="result">Результат: —</h2>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
